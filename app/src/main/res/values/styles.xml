@@ -15,6 +15,7 @@
         <item name="android:layout_width">110dp</item>
         <item name="android:height">110dp</item>
         <item name="android:layout_margin">3dp</item>
+        <item name="android:onClick">btnPostition</item>
     </style>
 
 </resources>
