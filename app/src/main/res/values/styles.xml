@@ -16,5 +16,5 @@
         <item name="android:height">110dp</item>
         <item name="android:layout_margin">3dp</item>
     </style>
-//mudar logo
+
 </resources>
