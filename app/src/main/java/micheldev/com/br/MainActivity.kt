@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import java.io.BufferedReader
 
 class MainActivity : AppCompatActivity() {
@@ -19,19 +20,20 @@ class MainActivity : AppCompatActivity() {
     fun play(position: Int, btnSelected: Button){
         if (currentplayer == 1){
             btnSelected.text = "X"
-            btnSelected.setBackgroundColor(R.color.colorPrimaryDark)
+            btnSelected.setBackgroundResource(R.color.colorPlayer1)
             playerOne.add(position)
             currentplayer = 2
 
         }else {
             if (currentplayer == 2) {
                 btnSelected.text = "O"
-                btnSelected.setBackgroundColor(R.color.colorPrimaryDark)
-                playerOne.add(position)
+                btnSelected.setBackgroundResource(R.color.colorPlayer2)
+                playertwo.add(position)
                 currentplayer = 1
             }
         }
         btnSelected.isClickable = false
+        checkResult()
 
     }
 
@@ -72,6 +74,9 @@ class MainActivity : AppCompatActivity() {
        }
 
 
-
+        when(winer){
+            1 -> Toast.makeText(this, "Parabén o jogadoe 1 venceu", Toast.LENGTH_LONG).show()
+            2 -> Toast.makeText(this, "Parabén o jogadoe 2 venceu", Toast.LENGTH_LONG).show()
+        }
    }
 }
