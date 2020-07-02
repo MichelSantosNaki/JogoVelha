@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
        if (playerOne.containsAll(row1) || playerOne.containsAll(row2) || playerOne.containsAll(row3) || playerOne.containsAll(col1) ||
                        playerOne.containsAll(col2) || playerOne.containsAll(col3) || playerOne.containsAll(diagonal1) || playerOne.containsAll(diagonal2)){
            winer=1
+
        }
        if (playertwo.containsAll(row1) || playertwo.containsAll(row2) || playertwo.containsAll(row3) || playertwo.containsAll(col1) ||
            playertwo.containsAll(col2) || playertwo.containsAll(col3) || playertwo.containsAll(diagonal1) || playertwo.containsAll(diagonal2)){
@@ -79,4 +80,9 @@ class MainActivity : AppCompatActivity() {
             2 -> Toast.makeText(this, "Parabén o jogadoe 2 venceu", Toast.LENGTH_LONG).show()
         }
    }
+    fun restar(view: View){
+        playertwo.clear()
+        playerOne.clear()
+        setContentView(R.layout.activity_main)
+    }
 }

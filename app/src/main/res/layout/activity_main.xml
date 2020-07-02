@@ -113,6 +113,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
         android:textStyle="bold"
+        android:onClick="restar"
          />
 
 
